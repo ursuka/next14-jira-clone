@@ -25,9 +25,6 @@ const Navbar: FC = () => {
     const pathname = usePathname();
     const pathnameParts = pathname.split('/');
     const pathnameKey = pathnameParts[3] as keyof typeof pathnameMap;
-
-    console.log(pathnameMap[pathnameKey])
-
     const { title, description } = pathnameMap[pathnameKey] || defaultMap;
 
     return (
